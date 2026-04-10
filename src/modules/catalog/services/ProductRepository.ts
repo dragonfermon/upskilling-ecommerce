@@ -17,7 +17,7 @@ const mockProducts: ProductDTO[] = [
         price: 89.99,
         stock: 50,
         imageURL: "https://picsum.photos/id/311/400/300",
-        isActive: true,
+        isActive: false,
     },
     {
         id: "p003",
@@ -27,9 +27,16 @@ const mockProducts: ProductDTO[] = [
         stock: 10,
         imageURL: "https://picsum.photos/id/312/400/300",
         isActive: true,
-    }       
+    }
 ];
 
-export async function getAllProducts(): Promise<ProductDTO[]>{
+export async function getAllProducts(): Promise<ProductDTO[]> {
     return mockProducts;
+}
+
+export async function getProductById(id: string): Promise<ProductDTO | null> {
+    const found = mockProducts.find(p => p.id === id);
+
+    return found ?? null;
+
 }

@@ -1,0 +1,7 @@
+import { getProducts } from "@/modules/catalog/services/ProductService";
+
+export async function GET() {
+    const products = await getProducts();
+
+    return Response.json(products);
+}
