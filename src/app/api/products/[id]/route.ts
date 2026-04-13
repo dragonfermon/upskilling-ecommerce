@@ -1,4 +1,4 @@
-import { getProductById } from "@/modules/catalog/services/ProductRepository";
+import { getProductById } from "@/modules/catalog/services/ProductService";
 
 export async function GET(
     _req: Request,
