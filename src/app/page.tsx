@@ -1,14 +1,12 @@
-import { Container, Typography } from "@mui/material";
+import { ProductList } from "@/modules/catalog/ui/ProductList";
+import { Layout } from "@/shared/ui/Layout";
 
 export default function Home() {
  return (
-    <Container>
-        <Typography variant="h4" gutterBottom>
-            Upskilling React Enterprise
-        </Typography>
-        <Typography>
-            Arquitetura primero, feature despues.
-        </Typography>
-    </Container>
+    <>
+        <Layout>
+            <ProductList />
+        </Layout>
+    </>
  );
 }
